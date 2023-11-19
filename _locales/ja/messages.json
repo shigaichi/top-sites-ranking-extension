@@ -1,0 +1,42 @@
+{
+  "extensionName": {
+    "message": "サイトランクビューア"
+  },
+  "extensionDescription": {
+    "message": "この拡張機能は、表示中のウェブサイトのアクセスランキングをリアルタイムで表示します。Trancoのデータベースから取得したランキング情報に基づき、日次または月次でグラフによるランキングの推移を分析できます。",
+    "description": "Description of the extension."
+  },
+  "unsupportedPage": {
+    "message": "この拡張機能は設定ページや拡張機能ストアページでは機能しません"
+  },
+  "currentRank": {
+    "message": "現在の順位"
+  },
+  "rankingTrend": {
+    "message": "ランキングの推移"
+  },
+  "loading": {
+    "message": "ロード中..."
+  },
+  "loadingError": {
+    "message": "ランキング情報の読み込みに失敗しました。後ほど再試行してください。"
+  },
+  "extensionInfo1": {
+    "message": "この拡張機能は、現在開いているタブのURLのアクセスランキングを表示します。"
+  },
+  "extensionInfo2": {
+    "message": "ランキング情報はTrancoから取得しています。"
+  },
+  "rank": {
+    "message": "順位"
+  },
+  "notFoundError": {
+    "message": "$domain$ のランキング情報が見つかりませんでした。",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.com"
+      }
+    }
+  }
+}

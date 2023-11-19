@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site Rank Viewer</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="content" class="content">
+        <div
+          id="unsupported-page"
+          class="localize alert alert-warning mt-2 d-none"
+          role="alert"
+          data-localize="unsupportedPage"
+        >
+          This extension does not work on settings pages and the Chrome Web Store.
+        </div>
+        <div id="ranking-info">
+          <h1 class="localize border-bottom" data-localize="currentRank">Current Rank</h1>
+
+          <div class="loading text-center">
+            <div class="spinner-border" role="status">
+              <span class="localize visually-hidden" data-localize="loading">Loading...</span>
+            </div>
+          </div>
+
+          <div id="current-rank" class="container d-none">
+            <div class="ranking-box">
+              <p class="rank-domain m-0">
+                <i class="me-2"
+                  ><svg height="1em" viewBox="0 0 576 512">
+                    <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path
+                      d="M309 106c11.4-7 19-19.7 19-34c0-22.1-17.9-40-40-40s-40 17.9-40 40c0 14.4 7.6 27 19 34L209.7 220.6c-9.1 18.2-32.7 23.4-48.6 10.7L72 160c5-6.7 8-15 8-24c0-22.1-17.9-40-40-40S0 113.9 0 136s17.9 40 40 40c.2 0 .5 0 .7 0L86.4 427.4c5.5 30.4 32 52.6 63 52.6H426.6c30.9 0 57.4-22.1 63-52.6L535.3 176c.2 0 .5 0 .7 0c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40c0 9 3 17.3 8 24l-89.1 71.3c-15.9 12.7-39.5 7.5-48.6-10.7L309 106z"
+                    /></svg
+                ></i>
+                <span id="rank-url">example.com</span>
+                <span id="rank-number" class="badge text-bg-primary float-end mt-1">123</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="graph-container">
+          <h3 class="localize border-bottom" data-localize="rankingTrend">Ranking Trend</h3>
+
+          <div class="loading text-center">
+            <div class="spinner-border" role="status">
+              <span class="localize visually-hidden" data-localize="loading">Loading...</span>
+            </div>
+          </div>
+          <div id="chart-container" class="d-none">
+            <canvas id="ranking-chart"></canvas>
+
+            <div class="period-btn btn-group" role="group">
+              <input type="radio" class="btn-check" name="period-radio" id="daily" checked />
+              <label class="btn btn-outline-primary" for="daily">Daily</label>
+
+              <input type="radio" class="btn-check" name="period-radio" id="monthly" />
+              <label class="btn btn-outline-primary" for="monthly">Monthly</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="error" class="localize alert alert-danger mt-2 d-none" role="alert" data-localize="loadingError">
+        Failed to load ranking information. Please try again later.
+      </div>
+      <div id="not-found" class="localize alert alert-warning mt-2 d-none" role="alert" data-localize="notFoundError">
+        No rank data.
+      </div>
+
+      <hr class="mt-2 mb-2" />
+
+      <div class="extension-info">
+        <p class="localize m-0" data-localize="extensionInfo1">
+          This extension shows the access ranking of the current tab's URL.
+        </p>
+        <p class="localize m-0" data-localize="extensionInfo2">the ranking data fetched from the Tranco database.</p>
+        <a class="m-0" target="_blank" rel="noopener" href="https://tranco-list.eu/"
+          >Tranco A Research-Oriented Top Sites Ranking Hardened Against Manipulation</a
+        >
+      </div>
+    </div>
+    <script type="module" src="./popup.ts"></script>
+  </body>
+</html>
