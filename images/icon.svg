@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+    <!-- 折れ線グラフ -->
+    <path d="M2 20L6 10L12 12L18 5L22 12" stroke="#007bff" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" />
+    <!-- グラフのポイント -->
+    <circle cx="6" cy="10" r="1" fill="#007bff" />
+    <circle cx="12" cy="12" r="1" fill="#007bff" />
+    <circle cx="18" cy="5" r="1" fill="#007bff" />
+    <circle cx="22" cy="12" r="1" fill="#007bff" />
+    <!-- 拡大鏡 -->
+    <circle cx="15.5" cy="15.5" r="3" stroke="#007bff" stroke-width="2" />
+    <line x1="19" y1="19" x2="22" y2="22" stroke="#007bff" stroke-width="2" stroke-linecap="round" />
+</svg>

@@ -1,0 +1,27 @@
+@import "bootstrap/scss/bootstrap";
+
+body {
+  width: 600px;
+  max-height: 800px;
+}
+
+.container {
+  padding: 15px;
+}
+
+.ranking-box {
+  font-size: 25px;
+  padding: 20px;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
+}
+
+.extension-info {
+  font-size: 12px;
+  color: #666;
+}
+
+svg {
+  fill: #ffd700;
+}

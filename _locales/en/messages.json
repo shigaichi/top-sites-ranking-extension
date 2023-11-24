@@ -1,0 +1,42 @@
+{
+  "extensionName": {
+    "message": "Site Rank Viewer"
+  },
+  "extensionDescription": {
+    "message": "This extension displays the access ranking of the current website. Based on the Tranco database.",
+    "description": "Description of the extension."
+  },
+  "unsupportedPage": {
+    "message": "This extension does not work on settings pages and Extension Store pages."
+  },
+  "currentRank": {
+    "message": "Current Rank"
+  },
+  "rankingTrend": {
+    "message": "Ranking Trend"
+  },
+  "loading": {
+    "message": "Loading..."
+  },
+  "loadingError": {
+    "message": "Failed to load ranking information. Please try again later."
+  },
+  "extensionInfo1": {
+    "message": "This extension shows the access ranking of the current tab's URL."
+  },
+  "extensionInfo2": {
+    "message": "The ranking data fetched from the Tranco database."
+  },
+  "rank": {
+    "message": "Rank"
+  },
+  "notFoundError": {
+    "message": "No ranking data available for $domain$",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.com"
+      }
+    }
+  }
+}
