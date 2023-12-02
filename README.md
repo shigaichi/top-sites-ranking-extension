@@ -6,6 +6,11 @@
 
 This repository is source codes of Chrome extension "Web Site Access Ranking Checker". This is a Chrome extension that displays the access ranking of the currently visited website. It provides an easy way to view both the real-time and historical popularity rankings of websites, leveraging data from the Tranco List.
 
+## Install
+
+* [Chrome web store](https://chromewebstore.google.com/detail/web-site-access-ranking-c/ohkdlkjanpnljmffkienggcglmaoleio)
+* [Firefox Browser ADD-ONS](https://addons.mozilla.org/ja/firefox/addon/web-access-ranking-checker/)
+
 ## Features
 
 - Real-time access ranking of the current website.
