@@ -1,7 +1,6 @@
 {
   "name": "top-sites-ranking-extension",
   "private": true,
-  "version": "0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -15,21 +14,22 @@
   },
   "devDependencies": {
     "@crxjs/vite-plugin": "^1.0.14",
-    "@types/chrome": "^0.0.248",
-    "@typescript-eslint/eslint-plugin": "^6.10.0",
-    "@typescript-eslint/parser": "^6.10.0",
-    "eslint": "^8.53.0",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-prettier": "^5.0.1",
-    "prettier": "^3.0.3",
-    "sass": "^1.69.5",
-    "stylelint": "^15.11.0",
-    "stylelint-config-standard-scss": "^11.1.0",
-    "typescript": "^4.5.4",
+    "@types/chrome": "^0.0.268",
+    "@typescript-eslint/eslint-plugin": "^6.18.0",
+    "@typescript-eslint/parser": "^6.18.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.2",
+    "prettier": "^3.1.1",
+    "sass": "^1.77.4",
+    "stylelint": "^16.1.0",
+    "stylelint-config-standard-scss": "^13.0.0",
+    "typescript": "^5.3.3",
     "vite": "^2.9.9"
   },
   "dependencies": {
-    "bootstrap": "^5.3.2",
-    "chart.js": "^4.4.0"
+    "bootstrap": "^5.3.3",
+    "chart.js": "^4.4.3",
+    "tldts": "^6.1.24"
   }
 }
