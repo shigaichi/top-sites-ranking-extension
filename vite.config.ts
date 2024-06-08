@@ -5,7 +5,7 @@ const manifest = defineManifest({
   manifest_version: 3,
   name: "Web site access ranking checker",
   description: "__MSG_extensionDescription__",
-  version: "0.0.1",
+  version: "0.0.2",
   default_locale: "en",
   permissions: ["activeTab"],
   icons: {

@@ -1,5 +1,6 @@
 import Chart from "chart.js/auto";
 import "./style.scss";
+import { getDomain } from "tldts";
 
 document.addEventListener("DOMContentLoaded", () => {
   localizeElements();
@@ -39,12 +40,17 @@ type RankData = {
 
 async function loadData(tabUrl: string, period: string): Promise<void> {
   try {
-    const hostname = new URL(tabUrl).hostname;
-    const domain = hostname.match(/^(?:.*?\.)?([a-zA-Z0-9\-_]{3,}\.(?:\w{2,8}|\w{2,4}\.\w{2,4}))$/)![1];
+    const domain = getDomain(tabUrl);
+    if (domain == null) {
+      displayUnsupportedMessage();
+      updateUIForLoading(false);
+      hideInfoHeaders();
+      return;
+    }
 
-    const url = getTargetUrl(domain, period);
+    const apiUrl = getApiUrl(domain, period);
 
-    const response = await fetch(url);
+    const response = await fetch(apiUrl);
     if (response.status === 404) {
       hideInfoHeaders();
       updateUIForLoading(false);
@@ -117,7 +123,7 @@ function getCheckedPeriod(): string {
   return checkedElement ? checkedElement.id : "monthly";
 }
 
-function getTargetUrl(domain: string, period: string): string {
+function getApiUrl(domain: string, period: string): string {
   const apiUrl = "https://ranking-api.kyokko.work/api/v1/rankings";
 
   if (period === "daily") {
@@ -128,7 +134,12 @@ function getTargetUrl(domain: string, period: string): string {
 }
 
 function isNotSupportPage(url: string): boolean {
-  return !url.startsWith("http") || url.includes("chrome.google.com/webstore") || url.includes("addons.mozilla.org");
+  return (
+    !url.startsWith("http") ||
+    url.includes("chrome.google.com/webstore") ||
+    url.includes("addons.mozilla.org") ||
+    url.includes("//localhost")
+  );
 }
 
 function displayUnsupportedMessage() {
